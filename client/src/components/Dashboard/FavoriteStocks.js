@@ -1,7 +1,13 @@
 import React from "react";
 import axios from "axios";
+import { private_alpha_key } from "../Auth/alphaVantageConfig";
 import FavoriteTickerstar from "./favoriteTickerstar";
-import { Input, Form, SearchIcon, ReturnButton } from '../Styles/Dashboard/YourFavorites'
+import {
+  Input,
+  Form,
+  SearchIcon,
+  ReturnButton
+} from "../Styles/Dashboard/YourFavorites";
 import {
   Loading,
   Row,
@@ -33,7 +39,7 @@ class FavoriteStocks extends React.Component {
       company // map that sends array of companies through axios to invoke external API
     ) =>
       axios.get(
-        `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${company}&interval=5min&apikey=TFUONSVQ3ZDFXFPG`
+        `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${company}&interval=5min&apikey=${private_alpha_key}`
       )
     );
     this.fetchStocks(promises);
