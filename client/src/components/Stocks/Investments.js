@@ -6,7 +6,7 @@ import { InvestContainer, InvestHolder } from "../Styles/Stocks/Investments";
 import { fire } from "../Auth/firebaseConfig";
 
 //const URL = "https://pickemm.herokuapp.com/api";
-const URL = "http://localhost:5000/api";
+const URL = "http://localhost:5500/api";
 
 class Investments extends React.Component {
   constructor(props) {

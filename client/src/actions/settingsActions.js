@@ -7,7 +7,7 @@ export const SUCCESS = "SUCCESS";
 export const ERROR = "ERROR";
 
 //URL Endpoints
-const URL = "http://localhost:5000/api";
+const URL = "http://localhost:5500/api";
 //const URL = "https://pickemm.herokuapp.com/api";
 
 // Action creator to get current settings

@@ -5,7 +5,7 @@ const private_alpha_key = require("./auth/alphaVantageConfig")
 scanner = () => {
   const YOUR_VIRTUAL_NUMBER = "18572560178";
   let userNumber = "";
-  //  const URL = "http://localhost:5000/api/sms"; // ********** CHANGE FOR DEPLOYMENT *************
+  //  const URL = "http://localhost:5500/api/sms"; // ********** CHANGE FOR DEPLOYMENT *************
   const URL = "https://pickemm.herokuapp.com/api/sms";
 
   getCustomers = () => {

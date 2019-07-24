@@ -79,5 +79,5 @@ server.get("/", async (req, res) => {
     .json({ response: "PICKEM Investor-Data App Successfully Launched" });
 });
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5500;
 server.listen(port, () => console.log(`\n** server up on port ${port} **\n`));

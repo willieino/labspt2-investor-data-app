@@ -17,7 +17,7 @@ import checkboxAdnRadioStyle from "../Styles/Calculator/jss/checkboxAdnRadioStyl
 import Button from "../Styles/Calculator/jss/Button.jsx";
 import { fire } from "../Auth/firebaseConfig";
 //URL Endpoints
-const URL = "http://localhost:5000/api";
+const URL = "http://localhost:5500/api";
 //const URL = "https://pickemm.herokuapp.com/api";
 
 class InputForm extends React.Component {

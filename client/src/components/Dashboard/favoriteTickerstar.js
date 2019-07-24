@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { fire } from "../Auth/firebaseConfig";
-const URL = "http://localhost:5000/api";
+const URL = "http://localhost:5500/api";
 //const URL = "https://pickemm.herokuapp.com/api";
 class FavoriteTickerstar extends React.Component {
   constructor(props) {

@@ -5,7 +5,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/willieino/labspt2-investor-data-app.git"
+    "url": "git+https://github.com/Lambda-School-Labs/labspt2-investor-data-app.git"
   },
   "scripts": {
     "batch": "knex migrate:rollback && knex migrate:latest",

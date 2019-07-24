@@ -4,7 +4,7 @@ import { Typography } from "@material-ui/core";
 import FavoriteStocks from "./FavoriteStocks";
 import { fire } from "../Auth/firebaseConfig";
 //const URL = "https://pickemm.herokuapp.com/api";
-const URL = "http://localhost:5000/api";
+const URL = "http://localhost:5500/api";
 class YourFavorites extends React.Component {
   constructor(props) {
     super(props);

@@ -10,7 +10,7 @@ import Button from "../Styles/Stocks/jsx/Button.jsx";
 import { withStyles, Zoom } from "@material-ui/core";
 
 //const URL = "https://pickemm.herokuapp.com/api";
-const URL = "http://localhost:5000/api";
+const URL = "http://localhost:5500/api";
 
 class BalanceInfo extends React.Component {
   constructor(props) {
