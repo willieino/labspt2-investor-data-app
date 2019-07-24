@@ -3,10 +3,11 @@ import styled from "styled-components";
 export const Row = styled.div`
   display: flex;
   flex-direction: row;
+  text-align: left;
   flex-wrap: wrap;
-  justify-content: space-around;
-  font-size: 12px;
+  font-size: 14px;
   width: 100%;
+  padding-bottom: 10px;
 `;
 
 export const InputContainer = styled.div`
@@ -29,10 +30,10 @@ export const BigContainer = styled.div`
   flex-direction: column;
 `;
 
-//export const SwitchContainer = styled.div`
- // display: flex;
- // flex-direction: column;
-//`;
+export const SwitchContainer = styled.div`
+ display: flex;
+ flex-direction: column;
+`;
 
 export const Title = styled.div`
   text-align: center;
@@ -52,6 +53,8 @@ export const Input1 = styled.input`
   background-color: rgb(231, 229, 248);
   border-radius: 5px;
   border: 1px solid black;
+  font-size: 14px;
+  //padding-bottom: 10px;
 `;
 
 export const Result = styled.div`

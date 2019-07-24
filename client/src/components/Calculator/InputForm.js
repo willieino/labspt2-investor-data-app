@@ -8,6 +8,8 @@ import {
   InputLeft,
   InputRight,
   BigContainer,
+  SwitchContainer,
+  Row,
   Title,
   Results,
   Input1,
@@ -229,19 +231,16 @@ class InputForm extends React.Component {
       <BigContainer>
         <InputContainer>
           <InputLeft>
-            <p>Number Shares:</p>
-            <p>Purchase Price: $</p>
-            <p>Sell Price: $</p>
-            <p>Buy Commission: %</p>
-            <p>Sell Commission: %</p>
-            <p>Capital Gains Tax Rate: %</p>
-            <p> </p>
-            <Button onClick={() => this.calculate()} color="primary">
-              Calculate
-            </Button>
+           <Row>Number Shares:</Row>
+            <Row>Purchase Price: $</Row>
+            <Row>Sell Price: $</Row>
+            <Row>Buy Commission: %</Row>
+            <Row>Sell Commission: %</Row>
+            <Row>Capital Gains Tax Rate: %</Row>
+           
           </InputLeft>
           <InputRight>
-            <p>
+         <Row> 
               <Input1
                 type="text"
                 onChange={this.changeHandler}
@@ -249,8 +248,8 @@ class InputForm extends React.Component {
                 value={this.props.value}
                 className="input1"
               />
-            </p>
-            <p>
+              </Row>       
+           <Row>
               <Input1
                 type="text"
                 onChange={this.changeHandler}
@@ -258,8 +257,8 @@ class InputForm extends React.Component {
                 value={this.props.value}
                 className="input1"
               />
-            </p>
-            <p>
+            </Row>    
+            <Row>
               <Input1
                 type="text"
                 onChange={this.changeHandler}
@@ -267,8 +266,8 @@ class InputForm extends React.Component {
                 value={this.props.value}
                 className="input1"
               />
-            </p>
-            <p>
+            </Row>
+            <Row>
               <Input1
                 type="text"
                 onChange={this.changeHandler}
@@ -276,8 +275,8 @@ class InputForm extends React.Component {
                 value={this.props.value}
                 className="input1"
               />
-            </p>
-            <p>
+            </Row>         
+            <Row>
               <Input1
                 type="text"
                 onChange={this.changeHandler}
@@ -285,8 +284,8 @@ class InputForm extends React.Component {
                 value={this.props.value}
                 className="input1"
               />
-            </p>
-            <p>
+            </Row>       
+            <Row>
               <Input1
                 type="text"
                 onChange={this.changeHandler}
@@ -294,31 +293,37 @@ class InputForm extends React.Component {
                 value={this.props.value}
                 className="input1"
               />
-            </p>
-            <p> </p>
+            </Row>      
+            
+          </InputRight>
+        </InputContainer>
+        <SwitchContainer>
+           <Button onClick={() => this.calculate()} color="primary">
+              Calculate
+            </Button>
             <Button onClick={() => this.reset()} color="primary">
               Reset
             </Button>
-          </InputRight>
-        </InputContainer>
+        </SwitchContainer>
+        
         <Title>
           <h4>RESULTS</h4>
         </Title>
         <Results>
           <div className="l">
-            <p>Number Shares:</p>
-            <p>Net Buy Price: </p>
-            <p>Buy Commission: </p>
-            <p>Net Sell Price: </p>
-            <p>Sell Commission: </p>
-            <p>Profit/Loss: </p>
-            <p>Return on Investment %</p>
-            <p> </p>
+            <Row>Number Shares:</Row>
+            <Row>Net Buy Price: </Row>
+            <Row>Buy Commission: </Row>
+            <Row>Net Sell Price: </Row>
+            <Row>Sell Commission: </Row>
+            <Row>Profit/Loss: </Row>
+            <Row>Return on Investment %</Row>
           </div>
-          <div className="r">
+          <div className="r"><Row>
             <Result>{Number(this.state.numberShares)}</Result>
-            <p> </p>
-            <Result>
+            </Row>
+            <Row> 
+              <Result>
               <NumberFormat
                 value={`${this.decimalToFixed(this.state.newPurchasePrice)}`}
                 displayType={"text"}
@@ -326,8 +331,9 @@ class InputForm extends React.Component {
                 prefix={"$"}
               />
             </Result>
-            <p> </p>
-            <Result>
+            </Row>
+            <Row> 
+              <Result>
               <NumberFormat
                 value={`${this.decimalToFixed(this.state.newBuyCommission)}`}
                 displayType={"text"}
@@ -335,8 +341,9 @@ class InputForm extends React.Component {
                 prefix={"$"}
               />
             </Result>
-            <p> </p>
-            <Result>
+            </Row>
+            <Row>
+               <Result>
               <NumberFormat
                 value={`${this.decimalToFixed(this.state.newSellPrice)}`}
                 displayType={"text"}
@@ -344,8 +351,9 @@ class InputForm extends React.Component {
                 prefix={"$"}
               />
             </Result>
-            <p> </p>
-            <Result>
+            </Row>
+            <Row>
+               <Result>
               <NumberFormat
                 value={`${this.decimalToFixed(this.state.newSellCommission)}`}
                 displayType={"text"}
@@ -353,39 +361,33 @@ class InputForm extends React.Component {
                 prefix={"$"}
               />
             </Result>
-            <p> </p>
-            <Result>
-              <p
-                style={{
+            </Row>
+            <Row>
+              <Result   style={{
                   marginLeft: "0px",
                   color: this.state.pl < 0 ? "#ff2900" : "#21ab42"
-                }}
-              >
+                }}>
                 <NumberFormat
                   value={`${this.decimalToFixed(this.state.pl)}`}
                   displayType={"text"}
                   thousandSeparator={true}
                   prefix={"$"}
                 />
-              </p>
             </Result>
-            <p> </p>
-            <Result>
-              <p
-                style={{
+            </Row>
+            <Row>
+              <Result  style={{
                   marginLeft: "0px",
                   color: this.state.roi < 0 ? "#ff2900" : "#21ab42"
-                }}
-              >
-                <NumberFormat
+                }}>
+               <NumberFormat
                   value={`${this.decimalToFixed(this.state.roi)}`}
                   displayType={"text"}
                   thousandSeparator={true}
                   prefix={""}
                 />
-              </p>
-            </Result>
-            <p> </p>
+              </Result>
+              </Row>
           </div>
         </Results>
       </BigContainer>

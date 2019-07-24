@@ -28,6 +28,7 @@ const buttonStyle = {
     border: "none",
     borderRadius: "3px",
     position: "relative",
+    bottom: "2px",
     padding: "12px 30px",
     margin: ".3125rem 1px",
     fontSize: "12px",
