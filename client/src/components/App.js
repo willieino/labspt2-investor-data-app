@@ -21,8 +21,9 @@ import { css } from "glamor";
 //Calling Toastify without toast container
 toast.configure();
 //URL Endpoints
-const URL = "http://localhost:5000/";
+//const URL = "3/";
 //const URL = "https://pickemm.herokuapp.com/";
+const URL = "http://localhost:5000/";
 
 const AuthenticatedRoute = ({
   component: Component,
@@ -93,6 +94,7 @@ class App extends Component {
               lastName: user.displayName.substring(space + 1),
               userUID: user.uid
             });
+            console.log("User uid: ", this.state.userUID)
             this.addCurrentUser(user);
           })
           .catch(err => console.log("error ", err));
@@ -113,21 +115,22 @@ class App extends Component {
   //To sign out an get no error with firebase dropping the widget
   removeAuthListener: any;
   // Add current user method will grab the information from state create new user in our database
+  //addCurrentUser = => {
   addCurrentUser = () => {
-    let balance = 100000;
+    //let balance = 100000;
     function newUser(firstName, lastName, email, uid) {
       this.firstName = firstName;
       this.lastName = lastName;
       this.email = email;
       this.uid = uid;
-      this.balance = balance;
+     //this.balance = balance;
     }
     const creds = new newUser(
       this.state.firstName,
       this.state.lastName,
       this.state.currentEmail,
       this.state.userUID,
-      this.state.balance
+     // this.state.balance
     );
     const endpoint = `${URL}api/users`;
     axios
