@@ -13,7 +13,7 @@ const cardStyle = {
     color: "rgba(" + hexToRgb(blackColor) + ", 1)",
     background: "rgba(" + hexToRgb(whiteColor) + ", 1)",
     minWidth: 305,
-    height: 194,
+    height: 204,
     boxShadow: "0 1px 4px 0 rgba(" + hexToRgb(blackColor) + ", 0.14)",
     position: "relative",
     display: "flex",

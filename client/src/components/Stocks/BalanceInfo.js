@@ -271,7 +271,7 @@ class BalanceInfo extends React.Component {
                     )}`}
                   </p>
                 </Row>
-                <br />
+               {/*  <br /> */}
                 <Row>
                   <ButtonContainer>
                     <Button

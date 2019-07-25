@@ -8,7 +8,7 @@ import { Redirect } from "react-router";
 import * as ROUTES from "../../constants/routes";
 
 const URL = "https://pickemm.herokuapp.com/api";
-// const URL = "http://localhost:5500/api";
+ //const URL = "http://localhost:5500/api";
 
 class CheckoutForm extends Component {
   constructor(props) {
